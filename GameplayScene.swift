@@ -87,7 +87,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
             
         }else if firstBody.node?.name == "Player" && secondBody.node?.name == "Dark Cloud" {
             
-            self.runAction(SKAction.playSoundFileNamed("Dead.wav", waitForCompletion: false))
+            
             
             GameplayController.instance.life! -= 1
             
@@ -97,13 +97,24 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
                 createEndScorePanel()
             }
             
-            //self.runAction(SKAction.playSoundFileNamed("Dead.wav", waitForCompletion: false))
             
             
+            self.runAction(SKAction.playSoundFileNamed("Dead.wav", waitForCompletion: true))
             
             firstBody.node?.removeFromParent()
             
-            //self.scene?.paused = true
+            let seconds = 1.0
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+               self.scene?.paused = true
+                
+            })
+            
+            
+            
             
             
             let dead = SKSpriteNode(imageNamed:"dead")
@@ -115,7 +126,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
             
             
             
-            NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: #selector(self.playerDied), userInfo: nil, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(self.playerDied), userInfo: nil, repeats: false)
             
         }
     }
@@ -153,7 +164,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
             }
             if nodeAtPoint(location).name == "Quit" {
                 let scene = MainMenuScene(fileNamed: "MainMenu")
-                scene?.scaleMode = .AspectFill
+                scene?.scaleMode = .AspectFit
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseHorizontalWithDuration(1))
                 
             }
@@ -373,7 +384,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
             
             
             let scene = GameplayScene(fileNamed: "GameplayScene")
-            scene!.scaleMode = .AspectFill
+            scene!.scaleMode = .AspectFit
             self.view?.presentScene(scene!, transition: SKTransition.fadeWithColor(UIColor.blackColor(), duration:(1.7)))
         } else {
             
@@ -430,7 +441,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
             interstitial.loadRequest(request)
             
             let scene = MainMenuScene(fileNamed: "MainMenu")
-            scene?.scaleMode = .AspectFill
+            scene?.scaleMode = .AspectFit
             self.view?.presentScene(scene!, transition: SKTransition.doorsCloseHorizontalWithDuration(1))
             
             

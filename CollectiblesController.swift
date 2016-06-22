@@ -30,7 +30,28 @@ class CollectiblesController {
             }
             
         } else {
-            collectible = SKSpriteNode(imageNamed: "Coin")
+            let rand = arc4random_uniform(5)
+            switch rand {
+            case 0:
+                collectible = SKSpriteNode(imageNamed: "Coin")
+                print(rand)
+            case 1:
+                collectible = SKSpriteNode(imageNamed: "Cerry")
+                print(rand)
+            case 2:
+                collectible = SKSpriteNode(imageNamed: "Candy")
+                print(rand)
+            case 3:
+                collectible = SKSpriteNode(imageNamed: "Cake")
+                print(rand)
+            case 4:
+                collectible = SKSpriteNode(imageNamed: "Treasure")
+                print(rand)
+            default:
+               collectible = SKSpriteNode(imageNamed: "Coin")
+                print(rand)
+            }
+            
             collectible.name = "Coin"
             collectible.physicsBody = SKPhysicsBody(circleOfRadius: collectible.size.height/2)
         }

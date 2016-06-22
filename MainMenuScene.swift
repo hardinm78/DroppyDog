@@ -37,19 +37,19 @@ class MainMenuScene: SKScene {
                 GameManager.instance.gameStartedFromMainMenu = true
                 
                 let scene = GameplayScene(fileNamed: "GameplayScene")
-                scene!.scaleMode = .AspectFill
+                scene!.scaleMode = .AspectFit
                 self.view?.presentScene(scene!, transition: SKTransition.doorsOpenHorizontalWithDuration(1.7))
             }
             
             if nodeAtPoint(location).name == "Highscore" {
                 let scene = HighscoreScene(fileNamed: "HighscoreScene")
-                scene!.scaleMode = .AspectFill
+                scene!.scaleMode = .AspectFit
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVerticalWithDuration(1))
                 
             }
             if nodeAtPoint(location).name == "Options" {
                 let scene = OptionsScene(fileNamed: "OptionsScene")
-                scene!.scaleMode = .AspectFill
+                scene!.scaleMode = .AspectFit
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVerticalWithDuration(1))
             }
             if nodeAtPoint(location).name == "Quit" {

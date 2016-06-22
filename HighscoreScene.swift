@@ -46,7 +46,7 @@ class HighscoreScene: SKScene {
             
             if nodeAtPoint(location).name == "Back" {
                 let scene = MainMenuScene(fileNamed: "MainMenu")
-                scene?.scaleMode = .AspectFill
+                scene?.scaleMode = .AspectFit
                 self.view?.presentScene(scene!, transition: SKTransition.fadeWithColor(UIColor.blackColor(), duration: 1.5))
                 
             }
