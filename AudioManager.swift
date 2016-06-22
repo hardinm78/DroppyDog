@@ -18,7 +18,7 @@ class AudioManager {
     
     func playBGMusic() {
         
-        let url = NSBundle.mainBundle().URLForResource("Background music", withExtension: "mp3")
+        let url = NSBundle.mainBundle().URLForResource("bgmusic", withExtension: "mp3")
         
         var err: NSError?
         

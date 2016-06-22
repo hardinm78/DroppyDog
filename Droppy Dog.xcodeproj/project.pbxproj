@@ -16,8 +16,8 @@
 		8E3EF67D1D1ACDEC00402F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EF67B1D1ACDEC00402F1E /* Main.storyboard */; };
 		8E3EF6811D1ACE6300402F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EF6801D1ACE6300402F1E /* Assets.xcassets */; };
 		8E4D3DBF1D1AD3F40038FE72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D3DBE1D1AD3F40038FE72 /* GoogleService-Info.plist */; };
+		8E4D3DC31D1B21260038FE72 /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D3DC21D1B21260038FE72 /* bgmusic.mp3 */; };
 		8E7413EA1D12ED1500BE3BAC /* blow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E7413C31D12ED1500BE3BAC /* blow.ttf */; };
-		8E7413EB1D12ED1500BE3BAC /* Background music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E7413C51D12ED1500BE3BAC /* Background music.mp3 */; };
 		8E7413EC1D12ED1500BE3BAC /* Click Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E7413C61D12ED1500BE3BAC /* Click Sound.wav */; };
 		8E7413ED1D12ED1500BE3BAC /* Coin Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E7413C71D12ED1500BE3BAC /* Coin Sound.wav */; };
 		8E7413EE1D12ED1500BE3BAC /* Life Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E7413C81D12ED1500BE3BAC /* Life Sound.wav */; };
@@ -60,9 +60,9 @@
 		8E3EF67C1D1ACDEC00402F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Droppy Dog/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		8E3EF6801D1ACE6300402F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Droppy Dog/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		8E4D3DBE1D1AD3F40038FE72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Droppy Dog/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8E4D3DC21D1B21260038FE72 /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
 		8E74139B1D12EC7100BE3BAC /* Droppy Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droppy Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7413C31D12ED1500BE3BAC /* blow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blow.ttf; sourceTree = "<group>"; };
-		8E7413C51D12ED1500BE3BAC /* Background music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Background music.mp3"; sourceTree = "<group>"; };
 		8E7413C61D12ED1500BE3BAC /* Click Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Click Sound.wav"; sourceTree = "<group>"; };
 		8E7413C71D12ED1500BE3BAC /* Coin Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Coin Sound.wav"; sourceTree = "<group>"; };
 		8E7413C81D12ED1500BE3BAC /* Life Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Life Sound.wav"; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3EF66B1D19D70D00402F1E /* Dead.wav */,
-				8E7413C51D12ED1500BE3BAC /* Background music.mp3 */,
+				8E4D3DC21D1B21260038FE72 /* bgmusic.mp3 */,
 				8E7413C61D12ED1500BE3BAC /* Click Sound.wav */,
 				8E7413C71D12ED1500BE3BAC /* Coin Sound.wav */,
 				8E7413C81D12ED1500BE3BAC /* Life Sound.wav */,
@@ -335,6 +335,12 @@
 				TargetAttributes = {
 					8E74139A1D12EC7100BE3BAC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RFR5R2MW37;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -369,9 +375,9 @@
 				8E3EF6731D1ACD9300402F1E /* GameScene.sks in Resources */,
 				8EB4E5B61D198C1700F6DE0B /* Player 1.png in Resources */,
 				8EB4E5B71D198C1700F6DE0B /* Player 2.png in Resources */,
-				8E7413EB1D12ED1500BE3BAC /* Background music.mp3 in Resources */,
 				8EB4E5BA1D198C1700F6DE0B /* Player 5.png in Resources */,
 				8E3EF67A1D1ACDD600402F1E /* LaunchScreen.storyboard in Resources */,
+				8E4D3DC31D1B21260038FE72 /* bgmusic.mp3 in Resources */,
 				8EB4E5AD1D198BCF00F6DE0B /* Player.atlas in Resources */,
 				8E3EF67D1D1ACDEC00402F1E /* Main.storyboard in Resources */,
 				8EB4E5BC1D198C1700F6DE0B /* Player 7.png in Resources */,
