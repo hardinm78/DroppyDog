@@ -8,12 +8,20 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
-class GameViewController: UIViewController {
+var interstitial: GADInterstitial!
 
+class GameViewController: UIViewController, UIAlertViewDelegate {
+
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        createAndLoadInterstitial()
+        
+        
         if let scene = MainMenuScene(fileNamed:"MainMenu") {
             // Configure the view.
             let skView = self.view as! SKView
@@ -30,9 +38,30 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             skView.presentScene(scene)
+            
+            
         }
     }
+    
+    func createAndLoadInterstitial() {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-6381417154543225/5519422796")
+        let request = GADRequest()
+        // Request test ads on devices you specify. Your test device ID is printed to the console when
+        // an ad request is made.
+        //request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b" ]
+        interstitial.loadRequest(request)
+    }
+    
+    func runInterstitial(){
+        if interstitial.isReady {
+            interstitial.presentFromRootViewController(self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+    
 
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
@@ -53,4 +82,4 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-}
+        }

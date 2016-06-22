@@ -7,7 +7,7 @@
 //
 
 import SpriteKit
-
+import GoogleMobileAds  
 class GameplayScene:SKScene, SKPhysicsContactDelegate {
     
     var cloudsController = CloudsController()
@@ -42,6 +42,9 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
     
     
     override func didMoveToView(view: SKView) {
+       
+        
+        
         
         initializeVariables()
       self.runAction(SKAction.playSoundFileNamed("Coin Sound.wav", waitForCompletion: false))
@@ -411,6 +414,21 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate {
                 }
             }
             GameManager.instance.saveData()
+            
+//              
+            
+            if interstitial.isReady {
+                let currentViewController:UIViewController=UIApplication.sharedApplication().keyWindow!.rootViewController!
+                
+                interstitial.presentFromRootViewController(currentViewController)
+            } else {
+                print("Ad wasn't ready")
+            }
+            
+            interstitial = GADInterstitial(adUnitID: "ca-app-pub-6381417154543225/5519422796")
+            let request = GADRequest()
+            interstitial.loadRequest(request)
+            
             let scene = MainMenuScene(fileNamed: "MainMenu")
             scene?.scaleMode = .AspectFill
             self.view?.presentScene(scene!, transition: SKTransition.doorsCloseHorizontalWithDuration(1))

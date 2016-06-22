@@ -45,9 +45,11 @@
 		8EB4E5BB1D198C1700F6DE0B /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4E5B41D198C1700F6DE0B /* Player 6.png */; };
 		8EB4E5BC1D198C1700F6DE0B /* Player 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4E5B51D198C1700F6DE0B /* Player 7.png */; };
 		8EDFBCBB1D1850BD00111E06 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDFBCBA1D1850BD00111E06 /* AudioManager.swift */; };
+		F5E213E91C16485CE4DA0CF7 /* Pods_Droppy_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A00510D418A6E7BD2A2852 /* Pods_Droppy_Dog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C5A173282EC95C9635D3F27 /* Pods-Droppy Dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Droppy Dog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Droppy Dog/Pods-Droppy Dog.release.xcconfig"; sourceTree = "<group>"; };
 		8E3EF66B1D19D70D00402F1E /* Dead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Dead.wav; sourceTree = "<group>"; };
 		8E3EF66E1D1ACD7400402F1E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Droppy Dog/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8E3EF6701D1ACD8800402F1E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Droppy Dog/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
@@ -88,6 +90,8 @@
 		8EB4E5B41D198C1700F6DE0B /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 6.png"; sourceTree = "<group>"; };
 		8EB4E5B51D198C1700F6DE0B /* Player 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 7.png"; sourceTree = "<group>"; };
 		8EDFBCBA1D1850BD00111E06 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		E9A00510D418A6E7BD2A2852 /* Pods_Droppy_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Droppy_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F222A8C1385ED8880555FFEC /* Pods-Droppy Dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Droppy Dog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Droppy Dog/Pods-Droppy Dog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +99,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E213E91C16485CE4DA0CF7 /* Pods_Droppy_Dog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BB1D228C09EA003EC536446 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F222A8C1385ED8880555FFEC /* Pods-Droppy Dog.debug.xcconfig */,
+				1C5A173282EC95C9635D3F27 /* Pods-Droppy Dog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8E7413921D12EC7100BE3BAC = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,8 @@
 				8E7414011D12EDCB00BE3BAC /* Scenes */,
 				8E7413B41D12EC9F00BE3BAC /* Assets */,
 				8E74139C1D12EC7100BE3BAC /* Products */,
+				2BB1D228C09EA003EC536446 /* Pods */,
+				CC4D5D2B53BE4C2215F2739B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +292,14 @@
 			name = "Audio Manager";
 			sourceTree = "<group>";
 		};
+		CC4D5D2B53BE4C2215F2739B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9A00510D418A6E7BD2A2852 /* Pods_Droppy_Dog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E7413B11D12EC7100BE3BAC /* Build configuration list for PBXNativeTarget "Droppy Dog" */;
 			buildPhases = (
+				8809A06999A346DEF40B38CC /* [CP] Check Pods Manifest.lock */,
 				8E7413971D12EC7100BE3BAC /* Sources */,
 				8E7413981D12EC7100BE3BAC /* Frameworks */,
 				8E7413991D12EC7100BE3BAC /* Resources */,
+				6BED1C49ABDC2CD79A5102DD /* [CP] Embed Pods Frameworks */,
+				89C52E0F04B8BA475B2A1642 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,6 +388,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BED1C49ABDC2CD79A5102DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Droppy Dog/Pods-Droppy Dog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8809A06999A346DEF40B38CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89C52E0F04B8BA475B2A1642 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Droppy Dog/Pods-Droppy Dog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E7413971D12EC7100BE3BAC /* Sources */ = {
@@ -492,6 +567,7 @@
 		};
 		8E7413B21D12EC7100BE3BAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F222A8C1385ED8880555FFEC /* Pods-Droppy Dog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Droppy Dog/Info.plist";
@@ -503,6 +579,7 @@
 		};
 		8E7413B31D12EC7100BE3BAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5A173282EC95C9635D3F27 /* Pods-Droppy Dog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Droppy Dog/Info.plist";
